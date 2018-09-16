@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Model.ModelBase">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAgACAAAAAAAgAAAAAAAACABAAAAAAAAAAAAE=</HashCode>
+      <FileName>ModelBase.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ConcurrencyModelBase">
+    <Position X="4.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConcurrencyModelBase.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.Protocol">
+    <Position X="0.5" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAQAAEAAAAAAAIAQAAAAACAAgAAAgAAAA=</HashCode>
+      <FileName>Protocol.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LinkedToArticle" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Model.StorageModel.Article">
+    <Position X="5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAACAAgAEAAAAAAEQBYgAAAAAAggAAAAQAAAAA=</HashCode>
+      <FileName>StorageModel\Article.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Store" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Protocol" />
+      <Property Name="Attributes" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Model.StorageModel.ArticleAttribute">
+    <Position X="9.75" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAACAAAABAAAAAAAAAAAAAAgAAAgAAAAAAA=</HashCode>
+      <FileName>StorageModel\ArticleAttribute.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Attribute" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Model.StorageModel.Store">
+    <Position X="8.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAIAAAgAEAAAAIAEAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>StorageModel\Store.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Articles" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Model.StorageModel.Attribute">
+    <Position X="15.25" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAhAEAAIAAEAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>StorageModel\Attribute.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ArticleAttributes" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
