@@ -14,7 +14,7 @@ Namespace StorageModel
         Public Overridable Property Location As String
         Public Overridable Property Description As String
         Public Overridable Property Articles As ICollection(Of Article)
-        Public Overloads Property SubStores As ICollection(Of SubStore)
+        Public Overridable Property SubStores As ICollection(Of SubStore)
 
         Public Property DeletedFlag As Boolean Implements ILogicalDelete.DeletedFlag
         Public Property DeletedTimestamp As Date? Implements ILogicalDelete.DeletedTimestamp
