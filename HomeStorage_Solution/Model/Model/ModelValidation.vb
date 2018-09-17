@@ -13,7 +13,6 @@ Public Class ModelValidation(Of T As ModelBase)
         Finally
 
         End Try
-
         Return validationResults
     End Function
 End Class
