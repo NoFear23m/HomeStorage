@@ -61,8 +61,4 @@ Public MustInherit Class ModelBase
         If IsValid() Then Return True
         Return Not Validate.Where(Function(v) v.MemberNames.Contains(propertyName)).Any
     End Function
-
-
-
-
 End Class
