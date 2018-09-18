@@ -21,10 +21,17 @@ Namespace StorageModel
         Public Overridable Property Attributes As ICollection(Of ArticleAttribute)
         Public Overridable Property Stock As Integer
         Public Overridable Property MinimumStock As Integer
+        Public Overridable Property CanExpire As Boolean
 
-        Public Overridable Property StoreId As Integer
-        Public Overridable Property Store As Store
+        Public Overridable Property StoreInfoId As Integer
+        Public Overridable Property StoreInfo As StoreInfo
 
+        ''' <summary>
+        ''' Barcode, QR Code, EAN usw.
+        ''' </summary>
+        Public Overridable Property Code As String
+
+        Public Overridable Property Files As ICollection(Of Attachment)
 
 
         Public Property DeletedFlag As Boolean Implements ILogicalDelete.DeletedFlag

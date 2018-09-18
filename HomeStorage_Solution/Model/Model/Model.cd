@@ -28,15 +28,15 @@
   <Class Name="Model.StorageModel.Article">
     <Position X="5" Y="4.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAACAAgAEAAAAAAEQBYgAAAAAAggAAAAQAAAAA=</HashCode>
+      <HashCode>AABAABAACAAgAEAAAIABAQBYgAAAAAAggAAAAAAAAAA=</HashCode>
       <FileName>StorageModel\Article.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Store" />
+      <Property Name="StoreInfo" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="Protocol" />
       <Property Name="Attributes" />
+      <Property Name="Protocol" />
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
@@ -52,13 +52,13 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Model.StorageModel.Store">
-    <Position X="8.25" Y="0.5" Width="2.5" />
+    <Position X="7.5" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAIAAAgAEAAAAIAEAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <HashCode>AABAAAAAAAAgAEAAAAIAEAAAAAAAAAAgAAAAAAAgAAA=</HashCode>
       <FileName>StorageModel\Store.vb</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="Articles" />
+      <Property Name="StoreInfos" />
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
@@ -71,6 +71,18 @@
     <ShowAsCollectionAssociation>
       <Property Name="ArticleAttributes" />
     </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Model.StorageModel.StoreInfo">
+    <Position X="12.75" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAgAAAAAIAAEAAIEAAAAAAAgAAAAQAAAAA=</HashCode>
+      <FileName>StorageModel\StoreInfo.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Store" />
+      <Property Name="Article" />
+    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
