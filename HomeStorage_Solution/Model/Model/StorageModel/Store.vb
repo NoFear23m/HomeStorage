@@ -15,7 +15,7 @@ Namespace StorageModel
         Public Overridable Property Description As String
 
 
-        Public Overridable Property Articles As ICollection(Of Article)
+        Public Overridable Property StoreInfos As ICollection(Of StoreInfo)
 
 
         Public Property DeletedFlag As Boolean Implements ILogicalDelete.DeletedFlag

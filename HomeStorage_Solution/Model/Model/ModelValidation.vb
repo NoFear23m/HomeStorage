@@ -10,8 +10,6 @@ Public Class ModelValidation(Of T As ModelBase)
             Validator.TryValidateObject(entity, validationContext, validationResults, True)
         Catch ex As Exception
             Debug.WriteLine(String.Format("FEHLER Validate: {0}", ex.ToString))
-        Finally
-
         End Try
 
         Return validationResults
