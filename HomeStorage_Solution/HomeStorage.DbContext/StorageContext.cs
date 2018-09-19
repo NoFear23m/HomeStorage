@@ -30,6 +30,23 @@ namespace HomeStorage.DbContext
 
         }
 
+
+        public virtual DbSet<Model.StorageModel.Setting> Settings { get;set; }
+        public virtual DbSet<Model.StorageModel.Article> Articles { get;set; }
+        public virtual DbSet<Model.StorageModel.ArticleAttribute> ArticleAttributes { get;set; }
+        public virtual DbSet<Model.StorageModel.Attribute> Attributes { get;set; }
+        public virtual DbSet<Model.StorageModel.Attachment> Attachments { get;set; }
+        public virtual DbSet<Model.StorageModel.Store> Stores { get;set; }
+        public virtual DbSet<Model.StorageModel.StoreInfo> StoreInfos { get;set; }
+        
+
+
+
+
+
+
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -38,6 +55,15 @@ namespace HomeStorage.DbContext
                         .ConfigureWarnings(warnings => warnings.Throw(CoreEventId.IncludeIgnoredWarning));  
             }
         }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Model.StorageModel.Article>().HasOne(a => a.StoreInfo).WithOne(b => b.Article).HasForeignKey<Model.StorageModel.StoreInfo>(c => c.StoreInfoId);
+            modelBuilder.Entity<Model.StorageModel.Article>().HasOne(a => a.StoreInfo).WithOne(b => b.Article).HasForeignKey<Model.StorageModel.Article>(c => c.ArticleId);
+        }
+
+
 
         public override int SaveChanges()
         {
