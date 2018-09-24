@@ -2,7 +2,6 @@
 
 Imports System.Linq.Expressions
 Imports Microsoft.EntityFrameworkCore
-Imports System.Runtime.CompilerServices
 Imports HomeStorage.DbContext
 
 Public MustInherit Class GenericRepository(Of T As Class)
@@ -90,9 +89,6 @@ Public MustInherit Class GenericRepository(Of T As Class)
 
     Public Overridable Async Function GetAsync(query As IQueryable(Of T)) As Task(Of List(Of T)) Implements IGenericRepository(Of T).GetAsync
         Debug.WriteLine($"GetAllAsync (Direct return) for T of Type {GetType(T).ToString}")
-#If DEBUG Then
-        Threading.Thread.Sleep(500)
-#End If
         Return Await query.ToListAsync
     End Function
 
@@ -244,7 +240,7 @@ Public MustInherit Class GenericRepository(Of T As Class)
         Dim ergebnis As String = GetStatistik()
         Debug.WriteLine(ergebnis)
 
-        Dim anz As Integer = 0
+        Dim anz As Integer
         ContextInternal.ChangeTracker.DetectChanges()
         anz = ContextInternal.SaveChanges()
         Debug.WriteLine($"GenericRepository:Save returned {anz.ToString} changes saved successfully")
