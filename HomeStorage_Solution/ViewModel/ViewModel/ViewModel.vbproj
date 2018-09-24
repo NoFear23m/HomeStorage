@@ -17,6 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\HomeStorage.BL\HomeStorage.BL.vbproj" />
     <ProjectReference Include="..\..\Model\Model\Model.vbproj" />
   </ItemGroup>
 

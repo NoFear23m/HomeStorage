@@ -114,6 +114,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\HomeStorage.BL\HomeStorage.BL.vbproj">
+      <Project>{d6c05fdc-884f-417e-af6b-c8778967093e}</Project>
+      <Name>HomeStorage.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\HomeStorage.DAL\HomeStorage.DAL.vbproj">
+      <Project>{c87e2880-117c-4738-9336-236ae4bf8c03}</Project>
+      <Name>HomeStorage.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\HomeStorage.DbContext\HomeStorage.DbContext.csproj">
+      <Project>{e3ac3771-9c35-44b6-82ea-07c1598bfd6d}</Project>
+      <Name>HomeStorage.DbContext</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Model\Model\Model.vbproj">
       <Project>{6afce739-7451-4ef9-92b9-de6301bc3932}</Project>
       <Name>Model</Name>

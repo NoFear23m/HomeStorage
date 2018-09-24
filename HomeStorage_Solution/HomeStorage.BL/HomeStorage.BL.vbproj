@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>HomeStorage.BL</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HomeStorage.DAL\HomeStorage.DAL.vbproj" />
+    <ProjectReference Include="..\Model\Model\Model.vbproj" />
+  </ItemGroup>
+
+</Project>
