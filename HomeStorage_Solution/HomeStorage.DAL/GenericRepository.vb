@@ -4,7 +4,7 @@ Imports System.Linq.Expressions
 Imports Microsoft.EntityFrameworkCore
 Imports HomeStorage.DbContext
 
-Public MustInherit Class GenericRepository(Of T As Class)
+Public Class GenericRepository(Of T As Class)
     Implements IGenericRepository(Of T)
     Implements IDisposable
 
@@ -29,12 +29,16 @@ Public MustInherit Class GenericRepository(Of T As Class)
 
 
 
-    Protected Sub New()
+    Public Sub New()
         Me.New(Nothing, False)
     End Sub
 
+    Public Sub New(kontext As Object, Optional tracking As Boolean = False)
+        Me.New(DirectCast(kontext, StorageContext), False)
+    End Sub
 
-    Protected Friend Sub New(Optional kontext As StorageContext = Nothing, Optional tracking As Boolean = False)
+
+    Friend Sub New(Optional kontext As StorageContext = Nothing, Optional tracking As Boolean = False)
         Debug.WriteLine("Create new instance of GenericRepository...")
 
         ' Falls ein Kontext hineingereicht wurde, nehme diesen!
